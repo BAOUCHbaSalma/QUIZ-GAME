@@ -85,3 +85,24 @@ function Change(){
 
 
 Change();
+
+document.querySelector(".button-start").addEventListener("click", function(){
+    document.querySelector(".section-body").style.display = "flex";
+    
+})
+
+
+document.getElementById("exit").addEventListener("click", function(){
+    document.querySelector(".section-body").style.display = "none";
+})
+
+document.getElementById("continuer").addEventListener("click", function(){
+    document.getElementById("debut").style.display = "flex";
+    document.querySelector(".section-body").style.display = "none";
+    document.getElementById("home").style.display = "none";
+})
+
+
+
+   
+
