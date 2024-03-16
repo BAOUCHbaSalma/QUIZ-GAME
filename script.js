@@ -36,3 +36,52 @@ const quiz=[
 
 
 ]
+
+
+let currentQuestion=0;
+let score=0;
+let ss=document.getElementById("sc")
+let num=document.getElementById("numberqst")
+let opt = document.getElementById("opt")
+let question=document.getElementById('qst');
+
+
+let i=0
+function getData(){
+    question.innerHTML = quiz[i].Question;
+    for(let j = 0 ; j < quiz[i].Option.length;j++){
+
+        opt.innerHTML += 
+        `
+        <button id="rpns" class="rpns">${quiz[i].Option[j]}</button>
+         `
+         num.innerHTML =
+         `
+        <p >${i + 1}/${quiz.length}</p>
+         `
+    }
+}
+ getData();
+
+
+function Change(){
+    document.querySelectorAll(".rpns").forEach((e)=>{
+        e.addEventListener("click",function(){
+            if(quiz[i].Option.length>0 && i<quiz[i].Option.length -1){
+                opt.innerHTML=""
+            }
+            if(this.innerHTML == quiz[i].Correcte){
+                score +=10;
+                ss.innerText= score;
+            }
+             i++;
+           getData();
+            Change();
+        })
+    })
+
+     }
+
+
+
+Change();
