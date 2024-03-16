@@ -40,10 +40,14 @@ const quiz=[
 
 let currentQuestion=0;
 let score=0;
-let ss=document.getElementById("sc")
-let num=document.getElementById("numberqst")
-let opt = document.getElementById("opt")
+let ss=document.getElementById("sc");
+let greenScore=document.getElementById("greenScore");
+let redScore=document.getElementById("redScore");
+let num=document.getElementById("numberqst");
+let opt = document.getElementById("opt");
 let question=document.getElementById('qst');
+let green=0;
+let red=0;
 
 
 let i=0
@@ -64,15 +68,24 @@ function getData(){
  getData();
 
 
+
 function Change(){
     document.querySelectorAll(".rpns").forEach((e)=>{
         e.addEventListener("click",function(){
             if(quiz[i].Option.length>0 && i<quiz[i].Option.length -1){
                 opt.innerHTML=""
             }
+    
             if(this.innerHTML == quiz[i].Correcte){
                 score +=10;
+                green+=1
+                greenScore.innerText=green+"/"+quiz.length;
                 ss.innerText= score;
+            }else{
+
+                red+=1
+                redScore.innerText=red+"/"+quiz.length;
+                
             }
              i++;
            getData();
@@ -101,6 +114,8 @@ document.getElementById("continuer").addEventListener("click", function(){
     document.querySelector(".section-body").style.display = "none";
     document.getElementById("home").style.display = "none";
 })
+
+
 
 
 

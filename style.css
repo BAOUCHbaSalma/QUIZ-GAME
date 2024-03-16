@@ -164,6 +164,8 @@ justify-content: center;
 align-items: center;
 text-align: center;
 border-radius: 12px;
+
+
 }
 
 .felicite{
@@ -193,18 +195,17 @@ border-radius: 12px;
     display: flex;
     justify-content: space-evenly;
     margin: 0 auto;
+    
 }
-.scores > h5{
-    font-size: 18px;
-}
+
 .greenScore {
     color: green;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 
 }
 .redScore{
     color: red;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
