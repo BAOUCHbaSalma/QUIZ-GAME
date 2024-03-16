@@ -1,0 +1,210 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    background: #09001d;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.section-home{
+    width: 100%;
+    height: 100%;
+    background:url(bgg.jpg) no-repeat top right/cover;
+    display: none;
+}
+.texte{
+    color:white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.button-start{
+    padding: 10px 60px;
+    color: white;
+    border-radius: 15px;
+    background-color: rgb(168, 35, 128);
+    border: 2px solid white;
+    transition: .7s;
+    cursor: pointer;
+}
+.button-start:hover{
+    border: 2px solid white;
+    background:transparent;
+    transform: translateX(10px);
+}
+.text-wrapper p{
+    max-width: 500px;
+}
+.section-body{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 1px;
+    background: #ffffff00;
+    backdrop-filter: blur(5px);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.first-card{
+    width:450px;
+    height: 250px;
+    background: white;
+}
+
+.first-card h1{
+    color: rgb(183, 97, 158);
+    text-align:center;
+}
+
+.Button-first-card{
+    display: flex;
+    justify-content: space-around;
+    margin-top: -5px;
+}
+.Button-first-card button{
+    color: white;
+    background-color:rgb(168, 35, 128);
+    padding: 4px 20px;
+    border: 2px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .6s;
+ 
+}
+.Button-first-card > button:hover{
+    border: 2px solid rgb(168, 35, 128);
+    background: transparent;
+    color: rgb(168, 35, 128);
+}
+#debut{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(53, 6, 44) , rgb(46, 6, 31));
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card-quiz{
+    width:500px;
+    border:2px solid #c40094;
+    border-radius: 6px;
+   
+}
+
+.titleTop{
+    background: linear-gradient(45deg , transparent , #c40094 ,transparent);
+    border-radius: 6px;
+    text-align: center;
+
+}
+.opt{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 10px auto;
+    padding: 20px 10px;
+}
+#rpns{
+    padding: 8px ;
+    margin: 2px;
+    background: transparent;
+    color: white;
+    border: 2px solid #c40094;
+}
+
+.sc-wrapper{
+    display: flex;
+    width: 90px;
+    padding: 8px 15px;
+    margin: 0 auto;
+    justify-content: space-around;
+    text-align: center;
+}
+span{
+    padding: 5px;
+}
+
+.sc-wrapper > h1{
+    font-size: 18px;
+    color: #c40094;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 9px;
+    border-top-left-radius: 120px;
+    background: white;
+    font-weight: 800;
+}
+.flc{
+width: 100%;
+height: 100%;
+background: #ffffff2b;
+backdrop-filter: blur(5px);
+position: absolute;
+left: 0;
+top: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+border-radius: 12px;
+}
+
+.felicite{
+   
+    width:450px;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.758);
+    border: 2px solid #c40094;
+    border-radius: 10px;
+    padding: 20px;
+    
+   
+}
+.felicite h2{
+    color:rgb(183, 97, 158);
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.txtfe{
+    font-weight: bold;
+    padding-top: 30px;
+    color: white;
+}
+.scores{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+.scores > h5{
+    font-size: 18px;
+}
+.greenScore {
+    color: green;
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+.redScore{
+    color: red;
+    display: flex;
+    flex-direction: column-reverse;
+}
