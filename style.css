@@ -166,6 +166,7 @@ text-align: center;
 border-radius: 12px;
 
 
+
 }
 
 .felicite{
@@ -181,7 +182,7 @@ border-radius: 12px;
 }
 .felicite h2{
     color:rgb(183, 97, 158);
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;

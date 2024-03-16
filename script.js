@@ -34,6 +34,39 @@ const quiz=[
        Correcte:'The + sign'
    },
 
+   {
+    Question:"Q.4 AAAAAAAAAAAAAAAAAAAAAAAAA",
+    Option:[
+        'A',
+        'B',
+        'C',
+
+
+    ],
+    Correcte:'A'
+},
+{
+    Question:"Q.5 BBBBBBBBBBBBBBBB",
+    Option:[
+        'A',
+        'B',
+        'C',
+
+
+    ],
+    Correcte:'B'
+},
+{
+    Question:"Q.6 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+    Option:[
+       'A',
+        'B',
+        'C',
+
+    ],
+    Correcte:'C'
+},
+
 
 ]
 
@@ -72,20 +105,34 @@ function getData(){
 function Change(){
     document.querySelectorAll(".rpns").forEach((e)=>{
         e.addEventListener("click",function(){
-            if(quiz[i].Option.length>0 && i<quiz[i].Option.length -1){
+
                 opt.innerHTML=""
-            }
+        
     
             if(this.innerHTML == quiz[i].Correcte){
                 score +=10;
                 green+=1
                 greenScore.innerText=green+"/"+quiz.length;
                 ss.innerText= score;
+                // if(green>=3){
+
+                //     titleScore.innerHTML="Congratulations";
+                //     textScore.innerHTML="Congratulations on your impressive performance in the quiz game!";
+            
+                // }
+                PartScore();
             }else{
 
                 red+=1
                 redScore.innerText=red+"/"+quiz.length;
-                
+                // if(red>3){
+
+                //     titleScore.innerHTML="Good effort!";
+                //     textScore.innerHTML="Good try! Keep practicing to improve next time!";
+            
+                // }
+                PartScore();
+
             }
              i++;
            getData();
@@ -98,6 +145,29 @@ function Change(){
 
 
 Change();
+let titleScore=document.getElementById("titlescore");
+let textScore=document.getElementById("textscore");
+
+function PartScore(){
+    if(red<quiz.length/2){
+
+        titleScore.innerHTML="Good effort!";
+        textScore.innerHTML="Good try! Keep practicing to improve next time!";
+
+    }
+    
+    if(green>=quiz.length/2){
+        titleScore.innerHTML="Congratulations";
+        textScore.innerHTML="Congratulations on your impressive performance in the quiz game!";
+       
+
+    }
+    
+
+
+}
+
+
 
 document.querySelector(".button-start").addEventListener("click", function(){
     document.querySelector(".section-body").style.display = "flex";
@@ -114,6 +184,7 @@ document.getElementById("continuer").addEventListener("click", function(){
     document.querySelector(".section-body").style.display = "none";
     document.getElementById("home").style.display = "none";
 })
+
 
 
 
