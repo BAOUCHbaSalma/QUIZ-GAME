@@ -193,14 +193,23 @@ display: none;
 }
 
 #Recommencer{
-    background-color:rgb(168, 35, 128);
-    padding: 4px 20px;
-    border: 2px solid rgb(27, 26, 26);
-    border-radius: 15px;
+
     color: white;
+    background-color:rgb(111, 28, 86);
+    padding: 4px 49px;
+    border: 2px solid white;
+    border-radius: 7px;
+    cursor: pointer;
     transition: .6s;
     margin-top:20px ;
 
+
+}
+
+#Recommencer:hover{
+    border: 2px solid rgb(168, 35, 128);
+    background: transparent;
+    color: rgb(242, 239, 241);
 }
 
 .txtfe{

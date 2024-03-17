@@ -35,36 +35,37 @@ const quiz=[
    },
 
    {
-    Question:"Q.4 AAAAAAAAAAAAAAAAAAAAAAAAA",
+    Question:"Q.4 Quel est le rôle de la JVM en Java?",
     Option:[
-        'A',
-        'B',
-        'C',
+        'Traduction du code Java en code machine',
+        'Exécution du code Java sur nimporte quel système',
+        'Vérification des erreurs dans le code Java',
 
 
     ],
-    Correcte:'A'
+    Correcte:'Traduction du code Java en code machine'
+},
+
+{
+    Question:"Q.5 Quelle est la classe de base pour toutes les classes Java?",
+    Option:[
+        'Main',
+        'Object',
+        'System',
+
+
+    ],
+    Correcte:'System'
 },
 {
-    Question:"Q.5 BBBBBBBBBBBBBBBB",
+    Question:"Q.6 Quel mot-clé est utilisé pour déclarer une variable constante en Java?",
     Option:[
-        'A',
-        'B',
-        'C',
-
+       'const',
+        'final',
+        'static',
 
     ],
-    Correcte:'B'
-},
-{
-    Question:"Q.6 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
-    Option:[
-       'A',
-        'B',
-        'C',
-
-    ],
-    Correcte:'C'
+    Correcte:'const'
 },
 
 
@@ -188,7 +189,7 @@ function PartScore(){
 
 function Reload(){
     Recommencer.onclick=function(){
-        setTimeout(location.reload(),10)
+        location.reload()
     }
     
 
