@@ -83,9 +83,13 @@ let green=0;
 let red=0;
 
 
+
 let i=0
 function getData(){
-    question.innerHTML = quiz[i].Question;
+    if(i<=quiz.length-1){
+
+        question.innerHTML = quiz[i].Question;
+
     for(let j = 0 ; j < quiz[i].Option.length;j++){
 
         opt.innerHTML += 
@@ -97,6 +101,11 @@ function getData(){
         <p >${i + 1}/${quiz.length}</p>
          `
     }
+}else{
+    LastAnswer();
+
+} 
+
 }
  getData();
 
@@ -110,6 +119,7 @@ function Change(){
         
     
             if(this.innerHTML == quiz[i].Correcte){
+
                 score +=10;
                 green+=1
                 greenScore.innerText=green+"/"+quiz.length;
@@ -134,9 +144,12 @@ function Change(){
                 PartScore();
 
             }
+        
              i++;
            getData();
             Change();
+
+
         })
     })
 
@@ -144,9 +157,18 @@ function Change(){
 
 
 
+
+
 Change();
+
+
+
+
+
 let titleScore=document.getElementById("titlescore");
 let textScore=document.getElementById("textscore");
+let Recommencer=document.getElementById("Recommencer");
+
 
 function PartScore(){
     if(red<quiz.length/2){
@@ -162,10 +184,26 @@ function PartScore(){
        
 
     }
+}
+
+function Reload(){
+    Recommencer.onclick=function(){
+        setTimeout(location.reload(),10)
+    }
     
 
-
 }
+Reload();
+
+
+
+function LastAnswer(){
+    if (i>quiz.length-1){
+        
+        document.querySelector(".flc").style.display = "flex";
+    }
+}
+
 
 
 

@@ -164,8 +164,8 @@ justify-content: center;
 align-items: center;
 text-align: center;
 border-radius: 12px;
-
-
+flex-direction: column;
+display: none;
 
 }
 
@@ -178,6 +178,7 @@ border-radius: 12px;
     border-radius: 10px;
     padding: 20px;
     
+    
    
 }
 .felicite h2{
@@ -187,6 +188,18 @@ border-radius: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
+#Recommencer{
+    background-color:rgb(168, 35, 128);
+    padding: 4px 20px;
+    border: 2px solid rgb(27, 26, 26);
+    border-radius: 15px;
+    color: white;
+    transition: .6s;
+    margin-top:20px ;
+
+}
+
 .txtfe{
     font-weight: bold;
     padding-top: 30px;
@@ -210,3 +223,4 @@ border-radius: 12px;
     display: flex;
     flex-direction: column;
 }
+
