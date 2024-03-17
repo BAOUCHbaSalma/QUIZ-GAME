@@ -264,5 +264,34 @@ display: none;
 }
 
 
+@media screen and (max-width:450px){
+
+    .text-wrapper p{
+        width: 200px;
+        margin-right: 30px;
+        margin-left: 30px;
+
+    }
+    .card-quiz{
+        width:300px;
+         border:2px solid #c40094;
+         border-radius: 6px;
+        
+        }
+        #qst{
+            font-size: x-small;
+            margin: 0 auto;
+        }
+        .felicite{
+            width:300px;
+            height: 250px;
+        }
+        .felicite h2 ,.redScore , .greenScore ,.txtfe{
+            font-size: medium;
+        }
+        
+}
+
+
 
 
